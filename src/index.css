@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Cinzel", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-gold-50: #fefef0;
+  --color-gold-100: #fef8cc;
+  --color-gold-200: #fdf099;
+  --color-gold-300: #fbe05c;
+  --color-gold-400: #f8cc2e;
+  --color-gold-500: #d4af37; /* Premium Gold #d4af37 */
+  --color-gold-600: #b8901c;
+  --color-gold-700: #947011;
+  --color-gold-800: #75550c;
+  --color-gold-900: #573e0a;
+  --color-gold-950: #2b1d03;
+}
+
+@utility gold-gradient {
+  background: linear-gradient(135deg, #ffe066 0%, #d4af37 50%, #947011 100%);
+}
+
+@utility gold-text-gradient {
+  background: linear-gradient(135deg, #ffe066 0%, #d4af37 50%, #947011 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility bg-industrial {
+  background-image: radial-gradient(circle at 50% 50%, #151515 0%, #080808 100%);
+}
+
+@utility border-gold-glow {
+  border-color: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.05);
+}
+
+@utility hover-border-gold-glow {
+  &:hover {
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #080808;
+  color: #f3f4f6;
+}
